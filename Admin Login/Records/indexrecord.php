@@ -1,12 +1,21 @@
 <?php
 session_start();
 
-// Redirect to login page if not logged in
-if (!isset($_SESSION["admins"])) {
-    header("Location: admin_login.php"); // Ensure this is your login form
+if (!isset($_SESSION["admin_logged_in"]) || $_SESSION["admin_logged_in"] !== true) {
+    header("Location: admin_login.php");
     exit();
 }
+
+// Auto-logout after 30 minutes of inactivity
+if (isset($_SESSION["last_activity"]) && (time() - $_SESSION["last_activity"] > 1800)) {
+    session_unset();
+    session_destroy();
+    header("Location: admin_login.php");
+    exit();
+}
+$_SESSION["last_activity"] = time(); // Update last activity timestamp
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
