@@ -121,7 +121,7 @@ $_SESSION["last_activity"] = time(); // Update last activity timestamp
                 <div class="profile-details">
             <img src="../img/psa logo.png" class="logo-details">
                     <div class="name_job">
-                        <div class="name"><?php echo htmlspecialchars($_SESSION["admins"]); ?></div>
+                        <div class="name"><?php echo htmlspecialchars($_SESSION["admin_logged_in"]); ?></div>
                         <div class="job">Administrator</div>
                     </div>
                 </div>
