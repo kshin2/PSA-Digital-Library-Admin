@@ -1,0 +1,653 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: #e4e9f7;
+    max-width: 100vh;
+}
+.logo{
+    width: 25px;
+    height: 25px;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;
+    background: #1e6fc2;
+    padding: 6px 14px;
+    z-index: 1; /* High z-index to stay on top of the modal */
+    transition: all 0.5s ease;
+}
+.sidebar.open {
+    width: 300px;
+   
+}
+
+.sidebar .logo-details {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    
+}
+
+.sidebar .logo-details .logo_name {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open .logo-details,
+.sidebar.open .logo-details .logo_name {
+    opacity: 1;
+}
+
+.sidebar .logo-details #btn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open .logo-details #btn {
+    text-align: center;
+}
+
+.sidebar i {
+    color: #fff;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.sidebar .nav-list {
+    margin-top: 20px;
+    height: 100%;
+}
+
+.sidebar li {
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+}
+.sidebar li i {
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+.sidebar li a {
+    display: flex;
+    height: 5%;
+    width: 100%;
+    border-radius: 5px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background: #0d3762;
+}
+
+.sidebar li a:hover {
+    background: #fff;
+}
+
+.sidebar li a .links_name {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.sidebar.open li a .links_name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i {
+    transition: all 0.5s ease;
+    color: #11101D;
+}
+
+.sidebar li a .links_name {
+    flex: 1;
+}
+
+.sidebar li a .chevron-icon {
+    font-size: 18px;
+    color: #fff;
+    transition: 0.4s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Show when sidebar is open */
+.sidebar.open li a .chevron-icon {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Optional: color change on hover */
+.sidebar li a:hover .chevron-icon {
+    color: #11101D;
+}
+
+.sidebar li .tooltip {
+    position: absolute;
+    top: -20px;
+    left: calc(100% + 15px);
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: 0s;
+}
+
+.sidebar li:hover .tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sidebar.open li .tooltip {
+    display: none;
+}
+
+.sidebar li.profile {
+    position: fixed;
+    height: 60px;
+    width: 78px;
+    left: 0;
+    bottom: -8px;
+    padding: 10px 14px;
+    background: #0d3762;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+
+.sidebar.open li.profile {
+    width: 300px;
+}
+
+.sidebar li .profile-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.sidebar li img {
+    height: 45px;
+    width: 45px;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.sidebar li.profile .name,
+.sidebar li.profile .job {
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.sidebar li.profile .job {
+    font-size: 12px;
+}
+
+.sidebar .profile #log_out {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background:#0d3762;
+    width: 100%;
+    height: 65px;
+    line-height: 60px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open .profile #log_out {
+    width: 50px;
+    background: none;
+}
+.dropdown {
+    position: relative;
+  }
+  .dropdown-content {
+    display: block;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      opacity 0.2s ease-in,
+      transform 0.2s ease-in;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #1e6fc2;
+    border-radius: 5px;
+    width: 220px;
+    z-index: 10;
+    pointer-events: none;
+    margin-left: 15px;
+  }
+  .dropdown-content li {
+    list-style: none;
+  }
+  
+  .dropdown-content li a {
+    display: block;
+    padding: 10px 10px;
+    color: #ddd;
+    text-decoration: none;
+    width: 200px;
+    margin: 0 auto;
+  }
+  
+  .dropdown-content li a:hover {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  /* Show dropdown on hover */
+  .sidebar.open .dropdown:hover .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  
+    /* Override the transition to ease out when hovered */
+    transition:
+      opacity 0.3s ease-out,
+      transform 0.3s ease-out;
+  }
+  .dropdown-co {
+    display: block;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease-in, transform 0.2s ease-in;
+    position: fixed;
+    top: 50%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    background-color: #1e6fc2;
+    padding: 15px;
+    border-radius: 5px;
+    height: 80%;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    pointer-events: none; /* Prevent interaction when hidden */
+  }
+  
+  /* Show dropdown on hover of central office */
+  .sidebar.open .central-office:hover .dropdown-co{
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+    pointer-events: auto;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  }
+  
+  /* Make dropdown hidden when hovering over the closed navbar */
+  .sidebar:not(.open) .dropdown-co {
+    display: none;
+  }
+  
+  /* Category titles */
+  .category-item > a {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+    text-decoration: none;
+    padding: 10px;
+  }
+  .category-item > a:hover{
+    color: black;
+  }
+  /* Subcategory items */
+  .subcategory-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .subcategory-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px;
+  }
+  .subcategory-list li a:hover{
+    color: black;
+  }
+
+.record-layout{
+    width: 93%;
+    position: absolute;
+    margin-left: 25px;
+    left: 78px;
+    width: calc(100% -78px);
+    transition: all 0.5s ease;
+}
+
+.sidebar.open~.record-layout {
+    left: 300px;
+    width: calc(100%-250px);
+}
+
+.record-layout .text {
+    display: flex; /* Aligns icon and text inline */
+    align-items: center; /* Vertically aligns them */
+    color: #11101D;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 18px 0 10px 0;
+    gap: 5px; /* Optional: spacing between icon and text */
+  }
+.record-layout .text i{
+    color: #3B82F6;
+}  
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: .5px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+/* Table Styling */
+.table-fill {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+.table-fill thead {
+    background-color: #1e6fc2;
+    color: white;
+    padding: 12px;
+    border: .5px solid #ddd;
+    text-align: left;
+}
+.table-fill td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    background-color: #f9f9f9;
+}
+
+/* Hover Effect */
+.table-fill tbody tr:hover td {
+    background-color: #5393E3;
+    color: white;
+}
+.paginations{
+ text-align: center;
+}
+
+.search-container {
+  display: flex;
+  justify-content: space-between; /* Spread left and right */
+  align-items: center;
+  flex-wrap: wrap; /* Optional: helps on small screens */
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.left-side {
+  flex: 1;
+}
+.total-record{
+  margin-top: 5px;
+  font-weight: bold;
+  text-align: left;
+}
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.search-container i {
+  align-items: center;
+  display: flex;
+}
+
+#searchInput {
+  padding: 5px;
+  width: 300px;
+  margin-right: 5px; /* Space between input and button */
+}
+.input-search {
+  border: 1.5px solid transparent;
+  width: 25px;
+  height: 35px;
+  padding-left: 0.8em;
+  outline: none;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.input-search:hover,
+.input-search:focus {
+  border: 2px solid #4a9dec;
+  box-shadow: 0px 0px 0px 2px rgb(74, 157, 236, 20%);
+  background-color: white;
+}
+#clearSearch {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.record-button {
+background-color: #1e6fc2;
+color: #f3f7fe;
+border: none;
+cursor: pointer;
+border-radius: 3px;
+width: 80px;
+height: 35px;
+transition: 0.3s;
+}
+.record-button:hover {
+background-color: #f3f7fe;
+box-shadow: 0 0 0 2px #3b83f65f;
+color: #1e6fc2;
+}
+.add-button {
+    background-color: #1e6fc2;
+    color: #f3f7fe;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 80px;
+    height: 35px;
+    transition: 0.3s;
+    }
+    .add-button:hover {
+    background-color: #f3f7fe;
+    box-shadow: 0 0 0 2px #3b83f65f;
+    color: #1e6fc2;
+    }
+    .uploadbtn {
+        background-color: #1e6fc2;
+        color: #f3f7fe;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+        width: 80px;
+        height: 35px;
+        transition: 0.3s;
+        }
+        .uploadbtn:hover {
+        background-color: #2E7D32;
+        box-shadow: 0 0 0 2px #2E7D32 ;
+        color: white;
+        
+        }    
+/* Initial state for modals (hidden) */
+.modal {
+    display: none; /* Hide modals initially */
+    position: fixed;
+    z-index: 1000; /* Make sure modals are on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark background */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.open {
+    display: flex; /* Show modal when it has the 'open' class */
+}
+
+/* Modal content styles */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    width: 60%;
+    margin: auto;
+}
+
+/* Close button styles */
+.close-btn, .delete-close, .edit-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.close-btn:hover{
+    transition: ease-in .25ms;
+    background-color: red;
+    color: white;
+}
+/* Specific modal styles */
+#editModal, #deleteModal {
+    display: none; /* Hide both modals initially */
+}
+.input_title {
+    margin-top: 10px;
+    border: 2px solid transparent;
+    width: 40em;
+    height: 2.5em;
+    padding-left: 0.8em;
+    outline: none;
+    overflow: hidden;
+    background-color: #F3F3F3;
+    border-radius: 4px;
+    transition: all 0.5s;
+  }
+  
+  .input_title:hover,
+  .input_title:focus {
+    border: 1px solid #4A9DEC;
+    box-shadow: 0px 0px 0px 3px rgb(74, 157, 236, 20%);
+    background-color: white;
+  }
+  /* file upload button */
+    input[type="file"]::file-selector-button {
+        border-radius: 4px;
+        padding: 0 16px;
+        height: 30px;
+        cursor: pointer;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.16);
+        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+        margin-right: 16px;
+        transition: background-color 200ms;
+    }
+    
+    /* file upload button hover state */
+    input[type="file"]::file-selector-button:hover {
+        background-color: #FFD166 ;
+    }
+    
+    /* file upload button active state */
+    input[type="file"]::file-selector-button:active {
+        background-color: #FFD166;
+    }
+
+/* Modify Button Hover (for edit/delete options) */
+.modify-container {
+    position: relative;
+    display: inline-block;
+}
+
+.modify-options {
+    display: none;
+    position: absolute;
+    width: 100px;
+    top: 35px;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 1003; /* Ensure it's above other elements */
+    padding: 5px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modify-container:hover .modify-options {
+    display: block;
+}
+
+.modify-options button {
+    display: block;
+    width: 100%;
+    margin: 2px 0;
+    background: #1e6fc2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+/* Hover Effects */
+.edit-btn:hover {
+    background-color: green; /* Turn edit button green */
+}
+
+.delete-btn:hover {
+    background-color: red; /* Turn delete button red */
+}
+
