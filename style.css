@@ -1,0 +1,883 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: url('/Images/bgimage.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+.overlay {  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+  /* Modal Data Policy /
+
+  /* General Modal Styles */
+  .modal-content {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    
+  }
+  
+  /* Header Styling */
+  .modal-header {
+    background-color: #0056b3; /* PSA Theme Color */
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  /* Scrollable Privacy Policy Modal */
+  #privacyModal .modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* Style for links */
+  .modal-body a {
+    color: #0056b3;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .modal-body a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Form Labels */
+  .form-label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Checkbox Customization */
+  .form-check-input {
+    border: 2px solid #0056b3;
+  }
+  
+  .form-check-input:checked {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  /* Button Styles */
+  .btn-primary {
+    background-color: #0056b3;
+    border: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-secondary {
+    background-color: #0056b3;
+    border: none;
+    margin-left: 100px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #999;
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: space-between; /* Pushes buttons to opposite sides */
+    padding: 15px;
+  }
+  
+  /* Center the modal */
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensures it's centered vertically */
+  }
+  
+  /* General Modal Styles */
+  .modal-content {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 75vh;
+  }
+  
+  /* Fix Bootstrap modal positioning */
+  .modal.fade .modal-dialog {
+    transform: translate(0, 0); /* Remove Bootstrap animation shifting */
+  }
+  
+  /* Ensure modal is fully centered */
+  @media (min-width: 576px) {
+    .modal-dialog {
+      max-width: 900px;
+      margin: auto; /* Centers horizontally */
+    }
+  }
+  
+.banner-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}   
+/*.banner {
+    background-color: #1e6fc2;
+    color: white;
+    padding: 30px;
+    border-radius: 5px;
+    font-size: 50px;
+    font-weight: bold;
+}*/
+
+.banner-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 35px; /* Adds spacing between logo and title */
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 180px; /* Adjust as needed */
+    height: auto;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 900px;
+    border: 2px solid #0056b3;
+    border-radius: 25px; /* Rounded edges */
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    position: relative;
+    margin-left: 200px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    border-radius: 25px;
+}
+
+.search-btn {
+    border: none;
+    background: #0056b3; /* Primary color */
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 25px 25px 0; /* Rounded only on the right */
+    transition: background 0.3s;
+}
+
+.search-btn:hover {
+    background: #003d80; /* Darker shade on hover */
+}
+
+
+
+
+
+/* Nav-bar link */
+.bg-primary{
+    background-color: #1e6fc2 !important;
+}
+
+.navbar-nav .nav-link {
+    color: white; /* Default text color */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    padding: 10px 5px;
+    border-radius: 5px; /* Optional: Rounded corners */
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #fff4f4; /* White background */
+    color: #1e6fc2 !important; /* Primary blue color */
+}
+
+/*------------------------------------------------------Slider--------------------------------------------------------------*/
+
+.latest-release {
+  background-color: #ffffffab;
+  padding: 3rem 1rem;
+  /*margin-bottom: 50px;*/
+}
+
+.latest-release h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-size: 40px;
+  text-align: start;
+  color: #333;
+
+}
+
+.latest-release .card {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+.latest-release .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.latest-release .card img {
+  width: 100%;
+  height: auto; /* This avoids stretching */
+  object-fit: cover;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.latest-release .card-body {
+  padding: 0.75rem 1rem;
+  flex-grow: 1;
+}
+
+.latest-release .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  margin: 0;
+  white-space: normal;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.latest-release .view-all-btn {
+  display: block;
+  margin: 50px;
+  text-align: center;
+}
+
+.latest-release .btn-view-all {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #1e6fc2;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  font-size: 15px;
+  color: #ddd;
+  text-decoration: none;
+  line-height: 1; /* Ensures tight vertical spacing */
+}
+
+.latest-release .btn-view-all:hover {
+  background: white;
+  color: #1e6fc2;
+}
+
+.latest-release .btn-view-all i.bx {
+  font-size: 20px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.latest-release .btn-view-all:hover i.bx {
+  transform: translateX(5px);
+}
+
+.latest-release .btn-view-all:active {
+  transform: scale(0.95);
+}
+
+
+
+/*------------------------------------------------------------------------ About Section Layout -------------------------------------------------------------------*/
+/* About Section */
+.about {
+    display: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20%;
+    background-color: #f1f1f1;
+    background-image: url("/Images/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Container to hold image & text */
+.about-content {
+    display: flex;
+    align-items: center;
+    max-width: 1140px;
+    width: 100%;
+    gap: 100px; /* Spacing between image & text */
+    
+}
+
+/* Image Styling */
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: 65vh;
+    border-radius: 5px;
+    /*box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);*/
+}
+
+.about-text {
+  flex: 1;
+  text-align: justify;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+  padding: 50px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-text:hover {
+  transform: scale(1.03);
+  box-shadow: 4px 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Center "About Us" at the top of the section */
+.about-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 100px; /* Adjusts space between the title and content */
+  }
+
+.about-text h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 1200px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+        padding: 0 20px;
+    }
+}
+
+
+/* Navbar Hover Effect */
+nav ul li a {
+    padding: 40px 30px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s ease;
+    font-size: 18px !important;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+/* Show dropdown on hover with animation */
+@media (min-width: 992px) {
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeDown 0.3s ease-in-out forwards;
+    margin-top: 3px;
+  }
+}
+
+/* Fade-down animation */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base dropdown style */
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  padding: 10px 10px;
+  color: #333333;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-weight: 500;
+}
+
+/* Hover effect for items */
+.dropdown-menu .dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: #0d6efd; /* Bootstrap primary color */
+}
+
+
+/*about-mission-vision*/
+
+.about-mv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20%;
+    background-color: #1e6fc2;
+    
+    /*margin-top: 50px;*/   
+}
+
+.about-container {
+    max-width: 1140px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.about-row {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.about-box,
+.about-full-box {
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: justify;
+}
+
+.about-box:hover,
+.about-full-box:hover {
+    transform: scale(1.03);
+    box-shadow: 4px 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.about-box h2, .about-full-box h2 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-decoration-color: #2670B6;
+}
+
+.about-box p, .about-full-box p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-row {
+        flex-direction: column;
+    }
+}
+
+/*------------------------------------------------------------------------ footer ----------------------------------------------------------------------*/
+
+.footer {
+    background-color: #444; /* Dark background */
+    color: #ffffff;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border-top: 1px solid #444;
+  }
+
+  .footer p{
+    color: #ffffff;
+    font-size: 15px;
+  }
+  
+  .footer-section {
+    max-width: 200px;
+  }
+  
+  .footer h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .footer a {
+    color: #d1d1d1;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+    font-size: 15px;
+  }
+  
+  .footer a:hover {
+    color: #ffffff; /* Highlight on hover */
+  }
+  
+  .newsletter {
+    max-width: 300px;
+  }
+  
+  .newsletter input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .newsletter button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .newsletter button:hover {
+    background-color: #0056b3;
+  }
+  
+  .footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 30px;
+    /*border-top: 1px solid #444;*/
+    font-size: 20px;
+    color: #b1b1b1;
+  }
+  
+  .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .footer-icons img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    /*filter: invert(1);*/
+  }
+
+  /*-------------------------------------------------------------------------Infographics Style----------------------------------------------------------------------*/
+  .infographics-container {
+    padding: 40px 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  
+  .infographics-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .search-bar input {
+    width: 500px;
+    padding: 10px;
+    border-radius: 12px 0 0 12px;
+    border: 2px solid #0056b3;
+    outline: none;
+  }
+  
+  .search-bar button {
+    padding: 10px 20px;
+    border: none;
+    background: #0056b3;
+    color: white;
+    border-radius: 0 12px 12px 0;
+    cursor: pointer;
+  }
+  
+  .card img {
+    max-height: 100vh;
+    object-fit: cover;
+  }
+/*-------------------------------------------------------------------------- Infograpics Pagination---------------------------------------------------------------*/
+
+/*.pagination .page-item .page-link {
+  background-color: #2b6cc4;
+  color: white;
+  border: 1px solid #ccc;
+  margin: 0 4px;
+  transition: all 0.2s ease;
+}
+
+.pagination .page-item .page-link:hover {
+  background-color: #2b6cc4;
+  color: white;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #2b6cc4;
+  color: white;
+}*/
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/*--------------------------------------------------------------------------- Special Release Content --------------------------------------------------------*/
+/* Content Section Styling */
+/* Content Container */
+.content {
+  padding: 40px 20px;
+  max-width: 1800px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+/* Header */
+.content h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+/* Search Container 
+.sp-search-container {
+  display: flex;
+  align-items: center;
+  width: 900px;
+  border: 2px solid #0056b3;
+  border-radius: 25px; /* Rounded edges 
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  position: relative;
+}
+
+.sp-search-input {
+  flex: 1;
+  border: none;
+  padding-left: 15px;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+}
+
+.sp-search-btn {
+  border: none;
+  background: #0056b3; /* Primary color 
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0 25px 25px 0; /* Rounded only on the right 
+  transition: background 0.3s;
+}*/
+
+/* Table Style */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: white;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid black;
+  vertical-align: middle;
+  font-size: 20px;
+}
+
+/* Center text only for headers */
+th {
+  background-color: #0056b3;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Optional: also center text in cells if needed 
+td {
+  text-align: center;
+}*/
+
+/* PDF Button */
+.pdf-button {
+  background-color: #0056b3;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pdf-button:hover {
+  background-color: #1a488f;
+}
+
+.pdf-cell {
+  text-align: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.page-link {
+  background-color: #2b6cc4;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+/*-------------------------------------------------------------------------------DROPDOWN-----------------------------------------------------------------------------*/
+.central-office-menu {
+  width: 100%;
+  max-width: 1200px;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+.central-office-menu .dropdown-header {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+}
+
+.central-office-menu .dropdown-item {
+    white-space: normal;
+}
+
+/*----------------------------------------------------------------------------- IFRAME-----------------------------------------------------------------------------*/
+
+.drive-container {
+  max-width: 1500px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  text-align: center; /* Optional: aligns inline-block children center */
+  margin-bottom: 200px;
+}
+
+.drive-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+
+.drive-header i {
+  font-size: 28px;
+  color: #4285F4;
+  margin-right: 10px;
+}
+
+.drive-header h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.drive-iframe {
+  width: 100%;
+  max-width: 1480px;
+  height: 700px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto; /* This centers it horizontally */
+}
+.header-puf {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.header-h3 {
+  color:#333;
+  text-align: center;
+  align-items: center;
+}
