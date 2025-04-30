@@ -394,11 +394,30 @@ h1 {
     margin-bottom: 100px; /* Adjusts space between the title and content */
   }
 
-.about-text h3 {
+  .about-text h3 {
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 15px;
-}
+    position: relative;
+    display: inline-block; /* Important: ensures underline stays under text only */
+    text-decoration: none; /* Remove any default underline */
+  }
+  
+  .about-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Space between text and underline */
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #2670B6;
+    transition: width 0.3s ease;
+  }
+  
+  .about-text h3:hover::after {
+    width: 100%; /* Animate underline to full width */
+  }
+  
 
 .about-text p {
     font-size: 20px;
@@ -521,10 +540,25 @@ nav ul li a:hover {
     font-size: 35px;
     font-weight: bold;
     margin-bottom: 20px;
-    text-decoration: underline;
-    text-decoration-color: #2670B6;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    
+}
+.about-box h2::after, .about-full-box h2::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Position it slightly below the text */
+  left: 0;
+  width: 0%; /* Start with no underline */
+  height: 5px; /* Thickness of the underline */
+  background-color: #2670B6; /* Set underline color */
+  transition: width 0.3s ease; /* Smoothly animate the width */
 }
 
+.about-box h2:hover::after, .about-full-box h2:hover::after {
+  width: 100%; /* Underline grows to full width on hover */
+}
 .about-box p, .about-full-box p {
     font-size: 20px;
     line-height: 1.6;
@@ -543,7 +577,7 @@ nav ul li a:hover {
 .footer {
     background-color: #444; /* Dark background */
     color: #ffffff;
-    padding: 50px 0;
+    padding: 50px 0 20px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -554,6 +588,7 @@ nav ul li a:hover {
   .footer p{
     color: #ffffff;
     font-size: 15px;
+    text-align: justify;
   }
   
   .footer-section {
@@ -565,7 +600,14 @@ nav ul li a:hover {
     font-weight: bold;
     margin-bottom: 30px;
   }
-  
+  .footer h2{
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .footer h5{
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
   .footer a {
     color: #d1d1d1;
     text-decoration: none;
@@ -574,11 +616,13 @@ nav ul li a:hover {
     transition: color 0.3s;
     font-size: 15px;
   }
-  
+  .copyright{
+    justify-content: center;
+    text-align: center;
+  }
   .footer a:hover {
     color: #ffffff; /* Highlight on hover */
   }
-  
   .newsletter {
     max-width: 300px;
   }
@@ -608,22 +652,24 @@ nav ul li a:hover {
   .footer-bottom {
     width: 100%;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
     padding-top: 30px;
     /*border-top: 1px solid #444;*/
     font-size: 20px;
     color: #b1b1b1;
   }
-  
+  .footer-bottom p{
+    text-align: center;
+  }
   .footer-icons {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 30px;
+    margin-bottom: 10px;
   }
   
   .footer-icons img {
-    width: 50px;
+    width: 40px;
     height: auto;
     cursor: pointer;
     /*filter: invert(1);*/

@@ -34,6 +34,7 @@ try {
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
         <script src="script.js"></script>
         <link rel="stylesheet" href="style.css">
 
@@ -253,18 +254,21 @@ try {
 
             <section class="latest-release">
                 <div class="container">
-                    <h2>Latest Releases</h2>
+                    <h2>Latest Releases of Infographics</h2>
                     <div class="row g-4">
-                        <?php foreach ($latestInfographics as $info): ?>
+                        <?php foreach ($latestInfographics as $infographic): ?>
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                                 <div class="card h-100">
-                                    <a href="<?= htmlspecialchars($info['pdf_info']) ?>" target="_blank">
-                                        <img src="<?= htmlspecialchars($info['title_info']) ?>" alt="Infographic" class="card-img-top img-fluid">
-                                    </a>
+                                    <!-- Use data-filename instead of constructing full paths in PHP -->
+                                    <div class="pdf-wrapper" data-filename="<?= htmlspecialchars($infographic['pdf_info']) ?>">
+                                        <a href="../Admin Login/Infographics/pdfs/<?= htmlspecialchars($infographic['pdf_info']) ?>" target="_blank">
+                                            <canvas class="pdf-thumbnail mb-2" data-pdf="../Admin Login/Infographics/pdfs/<?= htmlspecialchars($infographic['pdf_info']) ?>" style="width:100%; border:2px solid #ccc;"></canvas>
+                                        </a>
+                                    </div>
                                     <div class="card-body">
                                         <h6 class="card-title text-center">
-                                            <a href="<?= htmlspecialchars($info['pdf_info']) ?>" target="_blank">
-                                                <?= htmlspecialchars($info['custom_title']) ?>
+                                            <a href="#" class="pdf-link" data-filename="<?= htmlspecialchars($infographic['pdf_info']) ?>">
+                                                <?= htmlspecialchars($infographic['pdf_info']) ?>
                                             </a>
                                         </h6>
                                     </div>
@@ -278,6 +282,7 @@ try {
                     </div>
                 </div>
             </section>
+
 
             <section id="about" class="about">
                 <h2 class="about-title">About Us</h2>
@@ -331,6 +336,49 @@ try {
             <section id="contact" class="contact">
                 <?php include ('footer.php'); ?>
             </section>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const basePath = "/Admin Login/Infographics/pdfs/";
+
+                    // Render PDFs
+                    document.querySelectorAll(".pdf-wrapper").forEach(wrapper => {
+                    const filename = wrapper.getAttribute("data-filename");
+                    const encodedFilename = encodeURIComponent(filename);
+                    const pdfUrl = `${basePath}${encodedFilename}`;
+                    const canvas = wrapper.querySelector("canvas");
+                    const context = canvas.getContext("2d");
+
+                    pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
+                        return pdf.getPage(1);
+                    }).then(page => {
+                        const scale = 1.5;
+                        const viewport = page.getViewport({ scale });
+                        canvas.height = viewport.height;
+                        canvas.width = viewport.width;
+
+                        return page.render({
+                        canvasContext: context,
+                        viewport: viewport
+                        }).promise;
+                    }).catch(error => {
+                        console.error("Error rendering PDF:", error);
+                        context.font = "16px sans-serif";
+                        context.fillText("Unable to load preview", 10, 50);
+                    });
+                    });
+
+                    // Fix PDF click links
+                    document.querySelectorAll(".pdf-link").forEach(link => {
+                    const filename = link.getAttribute("data-filename");
+                    const encodedFilename = encodeURIComponent(filename);
+                    link.setAttribute("href", `${basePath}${encodedFilename}`);
+                    link.setAttribute("target", "_blank");
+                    });
+                });
+            </script>
+
+
 
         <script>
             function searchFunction() {
