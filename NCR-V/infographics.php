@@ -75,7 +75,7 @@ try {
         <div class="card text-center p-2 shadow-sm">
           <a href="../Admin Login/Infographics/pdfs/<?= htmlspecialchars($infographic['pdf_info']) ?>" target="_blank">
             <canvas class="pdf-thumbnail mb-2" data-pdf="../Admin Login/Infographics/pdfs/<?= htmlspecialchars($infographic['pdf_info']) ?>" style="width:100%; border:2px solid #ccc;"></canvas>
-          </a>`
+          </a>
           <p class="mb-0">
             <a href="<?= $pdfPath ?>" target="_blank"><?= $safeTitle ?></a>
           </p>
