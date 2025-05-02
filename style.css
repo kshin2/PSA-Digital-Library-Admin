@@ -783,7 +783,7 @@ nav ul li a:hover {
 }
 
 .text-highlight:hover::after {
-  transform: scaleX(1);
+  transform: scaleX(.90);
 }
 
 
