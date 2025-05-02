@@ -388,17 +388,17 @@ try {
 
                 const routes = [
                     // NCR-V
-                    { keywords: ["infographics"], url: "../NCR-V/infographics.php" },
-                    { keywords: ["special release", "special releases", "sp"], url: "../NCR-V/special-release.php" },
-                    { keywords: ["women and men", "wam"], url: "../NCR-V/womenandmen.php" },
-                    { keywords: ["countryside in figures", "cif"], url: "../NCR-V/countryside_in_figures.php" },
-                    { keywords: ["public used files", "public used file", "puf"], url: "../NCR-V/public_used_files.php" },
+                    { keywords: ["infographics", "info", "infographic", "graphics", "graphic"], url: "../NCR-V/infographics.php" },
+                    { keywords: ["special release", "special releases", "sp", "special"], url: "../NCR-V/special-release.php" },
+                    { keywords: ["women and men", "wam","women","woman","men","man"], url: "../NCR-V/womenandmen.php" },
+                    { keywords: ["countryside in figures", "cif", "country", "countryside", "figures", "countryside in figure"], url: "../NCR-V/countryside_in_figures.php" },
+                    { keywords: ["public used files", "public used file", "puf", "public", "used", "files"], url: "../NCR-V/public_used_files.php" },
                     //Central Office branches
                     { keywords: ["household"], url: "../Central-Office/household.php" },
                     { keywords: ["establishment", "establishments"], url: "../Central-Office/establishment.php" },
-                    { keywords: ["administrative"], url: "../Central-Office/administrative.php" },
+                    { keywords: ["administrative", "admin"], url: "../Central-Office/administrative.php" },
                     // Central Office > Household
-                    { keywords: ["labor force survey", "lfs"], url: "../Central-Office/household.php?project=Labor+Force+Survey+(LFS)" },
+                    { keywords: ["labor force survey", "lfs", "labor", "force"], url: "../Central-Office/household.php?project=Labor+Force+Survey+(LFS)" },
                     { keywords: ["functional literacy, education and mass media survey", "functional", "flemms"], url: "../Central-Office/household.php?project=Functional+Literacy,+Education+and+Mass+Media+Survey+(FLEMMS)" },
                     { keywords: ["fies", "family income", "family income and expenditure survey"], url: "../Central-Office/household.php?project=Family+Income+and+Expenditure+Survey+(FIES)" },
                     { keywords: ["ces", "consumer", "consumer expectations", "consumer expectations survey"], url: "../Central-Office/household.php?project=Consumer+Expectations+Survey+(CES)" },
@@ -414,7 +414,7 @@ try {
                     { keywords: ["ppa", "provincial", "product", "accounting", "provincial product accounting"], url: "../Central-Office/establishment.php?project=Provincial+Product+Accounting+(PPA)" },
 
                     // Central Office > Administrative
-                    { keywords: ["building permit", "building", "permit"], url: "../Central-Office/administrative.php?project=Approved+Building+Permits" },
+                    { keywords: ["building permit", "building", "permit", "buildings","permits"], url: "../Central-Office/administrative.php?project=Approved+Building+Permits" },
 
                     //Central Office > Civil Registration
                     { keywords: ["civil registration", "civil", "registration"], url: "../Central-Office/civil_registration.php" },
