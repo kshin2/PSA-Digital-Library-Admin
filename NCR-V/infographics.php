@@ -57,7 +57,7 @@ try {
 <div class="container infographics-container">
   <!-- Header Row -->
   <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
-    <h1 class="infographics-title m-0">INFOGRAPHICS</h1>
+    <h1 class="infographics-title m-0"><span class="text-highlight">INFOGRAPHICS</span></h1>
     <div class="search-bar d-flex">
       <input type="text" id="search-input" value="<?= htmlspecialchars($searchTerm) ?>" placeholder="Search..." class="form-control">
       <button id="search-btn"><i class='bx bx-search'></i></button>

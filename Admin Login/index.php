@@ -8,7 +8,7 @@ if (!isset($_SESSION["admin_logged_in"]) || $_SESSION["admin_logged_in"] !== tru
 }
 
 // Auto-logout after 30 minutes of inactivity
-if (isset($_SESSION["last_activity"]) && (time() - $_SESSION["last_activity"] > 1800)) {
+if (isset($_SESSION["last_activity"]) && (time() - $_SESSION["last_activity"] > 30)) {
     session_unset();
     session_destroy();
     header("Location: admin_login.php");

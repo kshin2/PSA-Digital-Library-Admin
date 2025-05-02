@@ -18,11 +18,11 @@
                             NCR-V
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="ncrvDropdown">
-                            <li><a class="dropdown-item" href="infographics.php">Infographics</a></li>
-                            <li><a class="dropdown-item" href="special-release.php">Special Releases</a></li>
-                            <li><a class="dropdown-item" href="womenandmen.php">Women and Men</a></li>
-                            <li><a class="dropdown-item" href="countryside_in_figures.php">Countryside in Figures</a></li>
-                            <li><a class="dropdown-item" href="public_used_files.php">Public Used Files</a></li>
+                            <li><a class="dropdown-item" href="/NCR-V/infographics.php">Infographics</a></li>
+                            <li><a class="dropdown-item" href="/NCR-V/special-release.php">Special Releases</a></li>
+                            <li><a class="dropdown-item" href="/NCR-V/womenandmen.php">Women and Men</a></li>
+                            <li><a class="dropdown-item" href="/NCR-V/countryside_in_figures.php">Countryside in Figures</a></li>
+                            <li><a class="dropdown-item" href="/NCR-V/public_used_files.php">Public Used Files</a></li>
                         </ul>
                     </li>
                     <!-- Dropdown End -->

@@ -28,7 +28,7 @@ $result = $conn->query($sql);
         </head>
         <body>
             <div class="content">
-                <h1>Countryside in Figures</h1>
+                <h1><span class="text-highlight">COUNTRYSIDE IN FIGURES</span></h1>
 
                 <div class="top-bar">
                     <div class="search-bar d-flex">
@@ -40,8 +40,8 @@ $result = $conn->query($sql);
                 <table>
                     <thead>
                         <tr>
-                            <th style="width: 85%;">Title</th>
-                            <th style="width: 15%;">PDF File</th>
+                            <th style="width: 90%;">Title</th>
+                            <th style="width: 10%;">PDF File</th>
                         </tr>
                     </thead>
                     <tbody id="release-table">

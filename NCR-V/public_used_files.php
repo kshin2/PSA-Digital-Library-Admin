@@ -25,7 +25,7 @@ if ($conn->connect_error) {
 </head>
 <body>
     <div class="container">
-        <h1 class = "header-puf">Public Used Files</h1>
+        <h1 class = "header-puf"><span class="text-highlight">PUBLIC USED FILES</span></h1>
 
             <div class="drive-container">
             <div class="drive-header">

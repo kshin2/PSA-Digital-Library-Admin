@@ -28,7 +28,7 @@ $result = $conn->query($sql);
 </head>
 <body>
     <div class="content">
-        <h1>Administrative</h1>
+        <h1><span class="text-highlight">ADMINISTRATIVE</span></h1>
 
         <div class="top-bar">
             <div class="d-flex gap-2 align-items-center flex-wrap">
@@ -52,8 +52,8 @@ $result = $conn->query($sql);
             <thead>
                 <tr>
                     <th style="width: 70%;">Title</th>
-                    <th style="width: 15%;">Project</th>
-                    <th style="width: 15%;">PDF File</th>
+                    <th style="width: 20%;">Project</th>
+                    <th style="width: 10%;">PDF File</th>
                 </tr>
             </thead>
             <tbody id="release-table">

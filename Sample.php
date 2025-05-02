@@ -254,7 +254,7 @@ try {
 
             <section class="latest-release">
                 <div class="container">
-                    <h2>Latest Releases of Infographics</h2>
+                    <h2>Latest Release of Infographics</h2>
                     <div class="row g-4">
                         <?php foreach ($latestInfographics as $infographic): ?>
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3">
