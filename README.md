@@ -1,4 +1,4 @@
- # PSA Digital Library Admin
+ # PSA Digital Library Admin and User Side Page
 
 A web-based administration system developed for the Philippine Statistics Authority (PSA) NCR PSO V.  
 This platform serves as a digital library, allowing administrators to manage and organize digital resources efficiently and make them accessible for users.
