@@ -21,11 +21,10 @@ Technologies Used
 
 Installation
 
-1. **Clone the repository:**
+1. Clone the repository:
    ```bash
    git clone https://github.com/kshin2/PSA-Digital-Library-Admin.git
 2. Set up your server environment:
-   ```bash
 • Install XAMPP or similar (Apache, MySQL, PHP stack).
 • Place the project folder inside your web server's root directory (e.g., htdocs).
 
