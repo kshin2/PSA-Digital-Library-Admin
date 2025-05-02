@@ -25,18 +25,19 @@ Installation
    ```bash
    git clone https://github.com/kshin2/PSA-Digital-Library-Admin.git
 2. Set up your server environment:
+   ```bash
 • Install XAMPP or similar (Apache, MySQL, PHP stack).
 • Place the project folder inside your web server's root directory (e.g., htdocs).
 
-3. Import the database:
+4. Import the database:
 • Open phpMyAdmin.
 • Create a database (example: library_db).
 •Import the provided SQL file (if available) or set up the tables manually according to the system requirements.
 
-4. Configure database connection:
+5. Configure database connection:
 • Update the database configuration settings inside your PHP project files (e.g., db.php).
 
-5. Run the project:
+6. Run the project:
 • Visit http://localhost/PSA-Digital-Library-Admin in your web browser.
 
 ---------------------------------------------------------------------------
