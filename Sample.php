@@ -127,32 +127,32 @@ try {
             <div class="modal-body" style="max-height: 400px; overflow-y: auto;">
                 <h2>Philippine Statistics Authority PSO - NCR V</h2>
                 <p><strong>1. Introduction</strong></p>
-                <p>The Philippine Statistics Authority (PSA) is committed to upholding the privacy and security of personal data in accordance with the Data Privacy Act of 2012...</p>
+                <p>The Philippine Statistics Authority – Provincial Statistical Office NCR V is a regional implementing unit mandated to generate and disseminate official statistics within its jurisdiction in Metro Manila. It ensures the efficient execution of statistical operations, civil registration services, and data quality assurance in accordance with national standards and protocols. PSO NCR V contributes significantly to evidence-based planning, policymaking, and governance through the production of reliable and timely statistical information.</p>
 
                 <p><strong>2. Scope</strong></p>
-                <p>This policy applies to all personal data collected and processed by PSA...</p>
+                <p>The Philippine Statistics Authority – Provincial Statistical Office NCR V encompasses the full range of statistical and civil registration activities within the cities of Las Piñas, Muntinlupa, Parañaque, and Taguig, as well as the Municipality of Pateros. Its functions include the conduct of censuses and surveys, processing and validation of statistical data, civil registry document management, and support for sectoral statistics across economic, demographic, social, and environmental domains. The office also coordinates with local government units, national agencies, and other stakeholders to ensure the effective integration of statistical systems and the alignment of local data initiatives with national development goals.</p>
 
                 <p><strong>3. Collection and Use of Personal Data</strong></p>
-                <p>PSA collects personal data to fulfill its statutory functions...</p>
+                <p>While the PSA may request your consent to process personal information, it may also do so without consent when such processing is mandated by law, particularly under Section 12 or 13 of the Data Privacy Act (DPA). In these cases, personal data may be used for addressing inquiries and document requests, soliciting feedback, providing updates, fulfilling legal obligations, and exercising public authority functions, including the protection of data privacy rights. Additionally, the PSA may collect other relevant personal data necessary to perform its mandate under RA No. 10625, RA No. 11315, RA No. 11055, and the PSA’s Citizens Charter.</p>
 
                 <p><strong>4. Data Protection and Security</strong></p>
-                <p>PSA employs appropriate security measures...</p>
+                <p>Personal data processed by the Philippine Statistics Authority (PSA) is treated with strict confidentiality and is not disclosed to any third party, in accordance with Republic Act No. 10625. Disclosure is permitted only when expressly allowed under Section 12 or Section 13 of the Data Privacy Act of 2012, ensuring compliance with lawful and legitimate processing grounds.</p>
 
                 <p><strong>5. Data Sharing and Disclosure</strong></p>
-                <p>PSA may share personal data with government agencies...</p>
+                <p>Personal data processed by the Philippine Statistics Authority (PSA) is treated with strict confidentiality and is not disclosed to any third party, in accordance with Republic Act No. 10625. Disclosure is permitted only when expressly allowed under Section 12 or Section 13 of the Data Privacy Act of 2012, ensuring compliance with lawful and legitimate processing grounds.</p>
 
                 <p><strong>6. Retention and Disposal</strong></p>
-                <p>Personal data shall be retained only as necessary...</p>
+                <p>Personal information is stored in PSA-managed computers and servers within a secure environment, with the possible use of cloud-based third-party providers under strict data protection safeguards. Retention of data is governed by applicable laws and internal policies, ensuring that personal data is kept only for as long as necessary to fulfill its intended purpose. Upon the end of its retention period, physical records are securely shredded and digital files are anonymized or irreversibly deleted to prevent any unauthorized access, retrieval, or further processing.</p>
 
                 <p><strong>7. Rights of Data Subjects</strong></p>
-                <p>Data subjects have the following rights under the Data Privacy Act...</p>
+                <p>Under the Data Privacy Act (DPA), you have the right to be informed about how your personal information is processed by the Philippine Statistics Authority (PSA). You may also exercise your rights as a data subject, including the right to access, correct inaccuracies, and object to the processing of your data when based on consent or legitimate interest, as provided by law. If you believe your data privacy rights have been violated, you may report the incident to the PSA at dpo@psa.gov.ph or file a complaint with the National Privacy Commission to seek appropriate remedies or compensation.</p>
 
                 <p><strong>8. Contact Information</strong></p>
                 <p>For inquiries, contact:</p>
-                <p>Philippine Statistics Authority PSO - NCR V <br> Email: [DPO Email Address] <br> Phone: [DPO Contact Number]</p>
+                <p>Philippine Statistics Authority PSO - NCR V <br> Email: ncr5@psa.gov.ph@gmail.com <br> Phone: (02) 8833-8284, (02) 8834-1601</p>
 
                 <p><strong>9. Policy Updates</strong></p>
-                <p>PSA reserves the right to update this policy...</p>
+                <p>PSA reserves the right to modify this privacy statement at any time. If you have any questions or suggestions regarding our privacy policy, please contact us at (02) 8833-8284, (02) 8834-1601 3rd Floor STWLPC Building 336-342 Sen. Gil Puyat Avenue (Buendia) Barangay 49, Pasay City 1300 or at info@psa.gov.ph.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#welcomeModal">
