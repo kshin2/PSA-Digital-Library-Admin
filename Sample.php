@@ -149,10 +149,10 @@ try {
 
                 <p><strong>8. Contact Information</strong></p>
                 <p>For inquiries, contact:</p>
-                <p>Philippine Statistics Authority PSO - NCR V <br> Email: ncr5@psa.gov.ph@gmail.com <br> Phone: (02) 8833-8284, (02) 8834-1601</p>
+                <p>Philippine Statistics Authority PSO - NCR V <br>ESTRELLA R. VARGAS <br> Chief Statistical Specialist <br> Email: ncr5@psa.gov.ph <br> Phone: (02) 8833-8284, (02) 8834-1601</p>
 
                 <p><strong>9. Policy Updates</strong></p>
-                <p>PSA reserves the right to modify this privacy statement at any time. If you have any questions or suggestions regarding our privacy policy, please contact us at (02) 8833-8284, (02) 8834-1601 3rd Floor STWLPC Building 336-342 Sen. Gil Puyat Avenue (Buendia) Barangay 49, Pasay City 1300 or at info@psa.gov.ph.</p>
+                <p>PSA reserves the right to modify this privacy statement at any time. If you have any questions or suggestions regarding our privacy policy, please contact us at (02) 8833-8284, (02) 8834-1601. We're located at 3rd Floor STWLPC Building 336-342 Sen. Gil Puyat Avenue (Buendia) Barangay 49, Pasay City 1300. You can email at psa.ncr.pso5@gmail.com or ncr5@psa.gov.ph.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#welcomeModal">

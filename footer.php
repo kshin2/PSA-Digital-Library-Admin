@@ -39,7 +39,7 @@
                 <div class="footer-icons">
                 <a href="https://psa.gov.ph/" target="_blank" rel="noopener noreferrer"><img src="/favicon.ico" alt="PSA"></a>
                 <a href="https://www.facebook.com/PSANCRPOV" target="_blank" rel="noopener noreferrer"><img src="/Images/fb.png" alt="Facebook"></a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ncr5@psa.gov.ph@gmail.com" target="_blank" rel="noopener noreferrer"><img src="/Images/gmail.png" alt="Gmail"></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ncr5@psa.gov.ph" target="_blank" rel="noopener noreferrer"><img src="/Images/gmail.png" alt="Gmail"></a>
                 
                 </div>
                 <p>© 2025 Philippine Statistics Authority NCR V, Inc. All rights reserved.</p>
