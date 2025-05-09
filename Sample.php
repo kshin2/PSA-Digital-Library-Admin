@@ -269,7 +269,7 @@ try {
                                     <div class="card-body">
                                         <h6 class="card-title text-center">
                                             <a href="#" class="pdf-link" data-filename="<?= htmlspecialchars($infographic['pdf_info']) ?>">
-                                                <?= htmlspecialchars($infographic['pdf_info']) ?>
+                                                <?= htmlspecialchars($infographic['title_info']) ?>
                                             </a>
                                         </h6>
                                     </div>
