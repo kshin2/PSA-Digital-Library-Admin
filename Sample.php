@@ -388,36 +388,36 @@ try {
 
                 const routes = [
                     // NCR-V
-                    { keywords: ["infographics", "info", "infographic", "graphics", "graphic"], url: "../NCR-V/infographics.php" },
+                    { keywords: ["infographics", "info", "infographic", "graphics", "graphic", "ncr-v", "ncr v", "ncr 5", "ncr"], url: "../NCR-V/infographics.php" },
                     { keywords: ["special release", "special releases", "sp", "special"], url: "../NCR-V/special-release.php" },
                     { keywords: ["women and men", "wam","women","woman","men","man"], url: "../NCR-V/womenandmen.php" },
                     { keywords: ["countryside in figures", "cif", "country", "countryside", "figures", "countryside in figure"], url: "../NCR-V/countryside_in_figures.php" },
-                    { keywords: ["public used files", "public used file", "puf", "public", "used", "files"], url: "../NCR-V/public_used_files.php" },
+                    { keywords: ["public used files", "public used file", "puf", "public", "used", "files", "used files"], url: "../NCR-V/public_used_files.php" },
                     //Central Office branches
-                    { keywords: ["household"], url: "../Central-Office/household.php" },
+                    { keywords: ["household", "households"], url: "../Central-Office/household.php" },
                     { keywords: ["establishment", "establishments"], url: "../Central-Office/establishment.php" },
                     { keywords: ["administrative", "admin"], url: "../Central-Office/administrative.php" },
                     // Central Office > Household
                     { keywords: ["labor force survey", "lfs", "labor", "force"], url: "../Central-Office/household.php?project=Labor+Force+Survey+(LFS)" },
-                    { keywords: ["functional literacy, education and mass media survey", "functional", "flemms"], url: "../Central-Office/household.php?project=Functional+Literacy,+Education+and+Mass+Media+Survey+(FLEMMS)" },
-                    { keywords: ["fies", "family income", "family income and expenditure survey"], url: "../Central-Office/household.php?project=Family+Income+and+Expenditure+Survey+(FIES)" },
+                    { keywords: ["functional literacy, education and mass media survey", "functional", "flemms", "functional literacy", "education", "mass media"], url: "../Central-Office/household.php?project=Functional+Literacy,+Education+and+Mass+Media+Survey+(FLEMMS)" },
+                    { keywords: ["fies", "family income", "family income and expenditure survey","family", "expenditure"], url: "../Central-Office/household.php?project=Family+Income+and+Expenditure+Survey+(FIES)" },
                     { keywords: ["ces", "consumer", "consumer expectations", "consumer expectations survey"], url: "../Central-Office/household.php?project=Consumer+Expectations+Survey+(CES)" },
-                    { keywords: ["ict", "nict", "nictures", "nicts", "nicts", "nicths", "national information and communications technology household survey"], url: "../Central-Office/household.php?project=National+Information+and+Communications+Technology+Household+Survey+(NICTHS)" },
+                    { keywords: ["ict", "nict", "nictures", "nicts", "nicts", "nicths", "national information and communications technology household survey", "information communications technology"], url: "../Central-Office/household.php?project=National+Information+and+Communications+Technology+Household+Survey+(NICTHS)" },
                     { keywords: ["hecs", "household energy consumption survey", "energy consumption", "energy"], url: "../Central-Office/household.php?project=Household+Energy+Consumption+Survey+(HECS)" },
                     { keywords: ["hsdv", "household survey on domestic visitors", "domestic visitors", "domestic"], url: "../Central-Office/household.php?project=Household+Survey+on+Domestic+Visitors+(HSDV)" },
-                    { keywords: ["ndhs", "national demographic and health survey", "demographic", "health"], url: "../Central-Office/household.php?project=National+Demographic+and+Health+Survey+(NDHS)" },
-                    { keywords: ["nms", "national migration survey", "migration", "migration survey"], url: "../Central-Office/household.php?project=National+Migration+Survey+(NMS)" },
+                    { keywords: ["ndhs", "national demographic and health survey", "demographic", "health", "health survey", "national demographic"], url: "../Central-Office/household.php?project=National+Demographic+and+Health+Survey+(NDHS)" },
+                    { keywords: ["nms", "national migration survey", "migration", "migration survey", "national migration"], url: "../Central-Office/household.php?project=National+Migration+Survey+(NMS)" },
 
                     // Central Office > Establishments
-                    { keywords: ["cpbi", "census", "census of philippine business and industry"], url: "../Central-Office/establishment.php?project=Census+of+Philippine+Business+and+Industry+(CPBI)" },
-                    { keywords: ["aspbi", "annual survey", "annual", "annual survey of philippine business and industry"], url: "../Central-Office/establishment.php?project=Annual+Survey+of+Philippine+Business+and+Industry+(ASPBI)" },
+                    { keywords: ["cpbi", "census", "census of philippine business and industry","census of business and industry", "business industry"], url: "../Central-Office/establishment.php?project=Census+of+Philippine+Business+and+Industry+(CPBI)" },
+                    { keywords: ["aspbi", "annual survey", "annual", "annual survey of philippine business and industry", "survey of business and industry", "business and industry"], url: "../Central-Office/establishment.php?project=Annual+Survey+of+Philippine+Business+and+Industry+(ASPBI)" },
                     { keywords: ["ppa", "provincial", "product", "accounting", "provincial product accounting"], url: "../Central-Office/establishment.php?project=Provincial+Product+Accounting+(PPA)" },
 
                     // Central Office > Administrative
                     { keywords: ["building permit", "building", "permit", "buildings","permits"], url: "../Central-Office/administrative.php?project=Approved+Building+Permits" },
 
                     //Central Office > Civil Registration
-                    { keywords: ["civil registration", "civil", "registration"], url: "../Central-Office/civil_registration.php" },
+                    { keywords: ["civil registration", "civil", "registration", "registrations"], url: "../Central-Office/civil_registration.php" },
                 ];
 
                 for (const route of routes) {
