@@ -62,8 +62,8 @@ try {
                     <input type="text" class="form-control" name="name" id="name" required placeholder="Enter your full name">
                     </div>
                     <div class="col-md-6">
-                    <label for="grade" class="form-label">Grade/Course:</label>
-                    <input type="text" class="form-control" name="grade_course" id="grade_course" required placeholder="Enter your grade or course">
+                    <label for="grade" class="form-label">Educational Level / Job Title:</label>
+                    <input type="text" class="form-control" name="grade_course" id="grade_course" required placeholder="Enter your grade or course or job title">
                     </div>
                 </div>
 
@@ -73,8 +73,8 @@ try {
                     <input type="number" class="form-control" name="age" id="age" required placeholder="Enter your age">
                     </div>
                     <div class="col-md-6">
-                    <label for="school" class="form-label">School/Institution:</label>
-                    <input type="text" class="form-control" name="school" id="school" required placeholder="Enter your school or institution">
+                    <label for="school" class="form-label">Institution / Company Name:</label>
+                    <input type="text" class="form-control" name="school" id="school" required placeholder="Enter your school or company">
                     </div>
                 </div>
 
